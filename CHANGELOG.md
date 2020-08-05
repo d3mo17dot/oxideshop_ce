@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [7.0.0-rc.2] - Unreleased
 
+### Added
+- Twig templates multi inheritance for modules
+
 ### Changed
 - Update Symfony components to v6
 - Cache storage format in `Internal\Framework\Module\Cache\FilesystemModuleCache` to `JSON`
@@ -13,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Switched to default PDO result set types when using PHP8.1
 - System requirements:
   - PHP must have access to a secure source of randomness [See more](https://www.php.net/manual/en/function.random-bytes.php). 
+- Switched to templating-engine agnostic names in Controller templates (e.g. `Controller::$_sThisTemplate = 'page/content'` instead of `'page/content.tpl'`)
 
 ### Fixed
 - Ensure \OxidEsales\EshopCommunity\Application\Model\NewsSubscribed::getOptInStatus int result type
@@ -25,11 +29,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - PHP v7 support
 - Composer v1 support
 - Support for NAME constants in Event classes
-- Class:
+- `Internal\Framework\Templating\Resolver\TemplateNameResolverInterface`
+- Classes:
   - `Core\PasswordSaltGenerator`
   - `Internal\Transition\Utility\FallbackTokenGenerator`
+  - `Internal\Framework\Templating\Resolver\LegacyTemplateNameResolver`
 - Methods:
   - `Application\Model\User::getUtilsObjectInstance()`
+  - `Internal\Framework\Templating\TemplateEngineInterface::getDefaultFileExtension()`
+  - `Internal\Framework\Templating\Loader\TemplateLoaderInteface::getPath()`
   - `Application\Model\UserPayment`
     - `load()`
     - `insert()`
@@ -554,6 +562,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Deprecated
 - Use of two stars (**) for filter strings in modules composer blacklist-filter.
+- `OxidEsales\EshopCommunity\Internal\Framework\Templating\TemplateEngineInterface::getDefaultFileExtension()`
 - Econda smarty plugin:
     - Classes:
         - `OxidEsales\Eshop\Core\Smarty\Plugin\Emos`

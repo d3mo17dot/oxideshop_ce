@@ -13,12 +13,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `Internal\Domain\Authentication\Bridge\RandomTokenGeneratorBridgeInterface`
     - `Internal\Framework\SystemRequirements\SystemSecurityCheckerInterface`
 
-- ### Changed
+### Changed
 - Updated Symfony components
 
 ### Deprecated
-- Method:
-    - `Application\Model\User::getUtilsObjectInstance()`
+- `Internal\Framework\Templating\Resolver\TemplateNameResolverInterface`
+- Methods:
+  - `Application\Model\User::getUtilsObjectInstance()`
+  - `Internal\Framework\Templating\Loader\TemplateLoaderInterface::getPath()`
+  - `Internal\Framework\Templating\TemplateEngineInterface::getDefaultFileExtension()`
+- Classes:
+- `Internal\Framework\Templating\Resolver\LegacyTemplateNameResolver`
+- `Internal\Framework\Templating\Resolver\TemplateNameResolver`
+
 
 ## [6.10.2] - Unreleased
 

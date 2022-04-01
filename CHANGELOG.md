@@ -14,7 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
     - `Internal\Framework\SystemRequirements\SystemSecurityCheckerInterface`
 
 - ### Changed
-- Updated Symfony components
+- Updated Symfony components to v4
 
 ### Deprecated
 - Method:

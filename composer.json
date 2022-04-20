@@ -29,15 +29,15 @@
         "oxid-esales/flow-theme": "^v3.8.0",
         "oxid-esales/oxideshop-doctrine-migration-wrapper": "dev-b-6.5.x",
         "oxid-esales/oxideshop-db-views-generator": "^v1.3.0",
-        "oxid-esales/oxideshop-demodata-installer": "dev-b-6.5.x",
-        "oxid-esales/oxideshop-composer-plugin": "^v5.2.0",
-        "oxid-esales/oxideshop-unified-namespace-generator": "dev-b-6.5.x",
-        "oxid-esales/oxideshop-facts": "dev-b-6.5.x"
+        "oxid-esales/oxideshop-demodata-installer": "dev-b-6.5.x-symfony5-OXDEV-5195",
+        "oxid-esales/oxideshop-composer-plugin": "dev-b-6.5.x-symfony5-OXDEV-5195",
+        "oxid-esales/oxideshop-unified-namespace-generator": "dev-b-6.5.x-symfony5-OXDEV-5195",
+        "oxid-esales/oxideshop-facts": "dev-b-6.5.x-symfony5-OXDEV-5195"
     },
     "require-dev": {
-        "oxid-esales/testing-library": "dev-b-6.5.x",
+        "oxid-esales/testing-library": "dev-b-6.5.x-symfony5-OXDEV-5195",
         "incenteev/composer-parameter-handler": "~v2.0",
-        "oxid-esales/oxideshop-ide-helper": "dev-b-6.5.x",
+        "oxid-esales/oxideshop-ide-helper": "dev-b-6.5.x-symfony5-OXDEV-5195",
         "oxid-esales/azure-theme": "^v1.4.1",
         "squizlabs/php_codesniffer": "^3.5.4"
     },

@@ -19,7 +19,12 @@ class ShopConfiguration
     /**
      * @var ClassExtensionsChain
      */
-    private $chain;
+    private $classExtensionsChain;
+
+    /**
+     * @var ModuleTemplateExtensionsChain
+     */
+    private $moduleTemplateExtensionsChain;
 
     /**
      * ShopConfiguration constructor.
@@ -91,7 +96,7 @@ class ShopConfiguration
      */
     public function setClassExtensionsChain(ClassExtensionsChain $chain)
     {
-        $this->chain = $chain;
+        $this->classExtensionsChain = $chain;
     }
 
     /**
@@ -99,7 +104,12 @@ class ShopConfiguration
      */
     public function getClassExtensionsChain(): ClassExtensionsChain
     {
-        return $this->chain;
+        return $this->classExtensionsChain;
+    }
+
+    public function getModuleTemplateExtensionChain(): ModuleTemplateExtensionsChain
+    {
+        return $this->moduleTemplateExtensionsChain;
     }
 
     /**
